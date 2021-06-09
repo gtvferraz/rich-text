@@ -27,6 +27,13 @@ const theme = {
   colors: {
     primary: '#0070f3',
   },
+
+  fonts: {
+    primary: {
+      family: 'Roboto',
+      generic: 'sans-serif'
+    }
+  }
 }
 
 export default function App({ Component, pageProps }) {
@@ -34,7 +41,7 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component theme={theme} {...pageProps} />
       </ThemeProvider>
     </>
   )
